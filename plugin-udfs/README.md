@@ -1,14 +1,21 @@
-# starburst-hive-udfs
-UDFs for compatibility with HiveQL
+# trino-udf-exploration
+**Trino UDF (SPI functions) exploration.**
 
-Hive contains a number of built in functions that don't exist in other SQL engines, including Trino. This repository will build a Trino plugin that adds many of these. Read more details on this project by the [link](https://starburstdata.atlassian.net/wiki/spaces/STARBURST/pages/2441117699/How+to+build+and+deploy+Starburst+UDF+package).
+This is a learning & experimental repository. It builds a Trino plugin that surfaces a number of functions that can be used in SQL statements.
 
 ## Build
-1. Clone this repository.
-2. Run mvn install (maven must be installed on your machine)
-3. This has been tested with maven version 3.8.5. Was initialy testing this using maven version 3.9.3 and it didn't work.
-4. This will produce a `starburst-hive-udfs-<version>.zip` under the `target/` directory.
-5. This is tested and build created sucessfully for SEP 402, 407, 413, 423, 429, 435, 443 and 453 using mvn clean package.
+Build was run with the following environment.
+- Apple M2 Pro chip w/OS 15.6.1
+- Maven 3.9.11
+- OpenJDK 24.0.2
+
+First, clone this repository, cd into this folder (i.e. `plugin-udfs`), and run the following command.
+
+`mvn package -Dmaven.test.skip=true`
+
+This will produce a `trino-udf-exploration-<version>.zip` under the `target/` directory.
+
+This has been tested and build created sucessfully for SEP 466.
 
 ## Installation
-Unzip `starburst-hive-udfs-<version>.zip` into the plugins directory of your Trino cluster and restart.
+Unzip `trino-udf-exploration-<version>.zip` into the plugins directory of your Trino cluster and restart.

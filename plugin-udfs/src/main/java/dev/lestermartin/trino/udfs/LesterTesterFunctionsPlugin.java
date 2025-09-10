@@ -14,6 +14,7 @@
 package dev.lestermartin.trino.udfs;
 
 import com.google.common.collect.ImmutableSet;
+import dev.lestermartin.trino.udfs.scalar.ExampleMapFunctions;
 import dev.lestermartin.trino.udfs.scalar.ExampleNullFunction;
 import dev.lestermartin.trino.udfs.scalar.ExampleStringFunction;
 import io.trino.spi.Plugin;
@@ -27,6 +28,7 @@ public class LesterTesterFunctionsPlugin
         return ImmutableSet.<Class<?>>builder()
                 .add(ExampleNullFunction.class)
                 .add(ExampleStringFunction.class)
+                .add(ExampleMapFunctions.class)
                 .build();
     }
 }
