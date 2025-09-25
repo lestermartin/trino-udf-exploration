@@ -15,7 +15,7 @@ First, clone this repository, cd into this folder (i.e. `plugin-udfs`), and run 
 
 This will produce a `trino-udf-exploration-<version>.zip` under the `target/` directory.
 
-This has been tested and build created sucessfully for SEP 466.
+This has been built successfully with Trino 466 dependencies and deploy on a Trino 476 instance.
 
 ## Installation
 Unzip `trino-udf-exploration-<version>.zip` into the plugins directory of your Trino cluster and restart.
