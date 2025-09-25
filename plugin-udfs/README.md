@@ -3,6 +3,9 @@
 
 This is a learning & experimental repository. It builds a Trino plugin that surfaces a number of functions that can be used in SQL statements.
 
+## Tutorial
+A related tutorial is available at https://lestermartin.dev/tutorials/trino-udf-java-scalar/ 
+
 ## Build
 Build was run with the following environment.
 - Apple M2 Pro chip w/OS 15.6.1
